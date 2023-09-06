@@ -26,10 +26,3 @@ export const populateProduce = produce =>{
         }
 
 }
-
-// store.dispatch({
-//     type: POPULATE,
-//     produce: produceData
-// })
-
-// store.dispatch(populateProduce())
