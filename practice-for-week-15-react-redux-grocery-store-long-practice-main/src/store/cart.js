@@ -6,20 +6,16 @@ export default function cartReducer(preState={},action){
     const nextState = {...preState};
     switch(action.type){
         case ADDPRODUCE:
-            nextState[action.item.id] = {id:action.item.id, count:action.item.count+1};
-
+            nextState[action.produceID] = {id: action.produceID, count: 1};
+            return nextState;
         default:
             return nextState;
     }
 }
 
-export const addItem = (item, count=0) =>{
-    const id = item.id;
+export const addItem = (produceID) => {
     return {
         type:ADDPRODUCE,
-        item:{
-            id,
-            count
-        }
+        produceID: produceID
     }
 }
